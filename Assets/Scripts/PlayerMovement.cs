@@ -25,8 +25,6 @@ public class PlayerMovement : MonoBehaviour
             jump = true;
         }
 
-        Debug.Log(controller.getGrounded());
-
         if (!controller.getGrounded())
         {
             animator.SetBool("JumpCheck", true);
