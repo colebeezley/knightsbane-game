@@ -1998,7 +1998,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 2.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -2044,7 +2044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 1055076666}
   animator: {fileID: 1055076663}
-  runSpeed: 30
+  runSpeed: 25
 --- !u!70 &1055076670
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
