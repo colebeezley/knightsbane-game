@@ -5,7 +5,7 @@ using UnityEngine;
 public class ParallaxBackground_0 : MonoBehaviour
 {
     public bool Camera_Move;
-    public float Camera_MoveSpeed = 1.5f;
+    public float Camera_MoveSpeed = 0.5f;
     [Header("Layer Setting")]
     public float[] Layer_Speed = new float[7];
     public GameObject[] Layer_Objects = new GameObject[7];
@@ -30,7 +30,7 @@ public class ParallaxBackground_0 : MonoBehaviour
         if (Camera_Move){
         _camera.position += Vector3.right * Time.deltaTime * Camera_MoveSpeed;
         }
-        for (int i=0;i<5;i++){
+        for (int i=0;i<4;i++){
             float temp = (_camera.position.x * (1-Layer_Speed[i]) );
             float distance = _camera.position.x  * Layer_Speed[i];
             Layer_Objects[i].transform.position = new Vector2 (startPos[i] + distance, _camera.position.y);
