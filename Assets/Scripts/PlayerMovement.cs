@@ -22,6 +22,11 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
+        // if (Mathf.Abs(horizontalMove) > 0.01){
+        //     sfx.PlayGrassRun();
+        // }
+        
+
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
