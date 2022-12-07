@@ -6,27 +6,35 @@ public class SFX : MonoBehaviour
 {
     public AudioSource Coin;
     public AudioSource Death;
-    public AudioSource GrassRun;
     public AudioSource Intro;
     public AudioSource NextLevel;
 
-    public void PlayCoin() {
+    public float speed;
+
+    PlayerMovement playermove;
+    CharacterController2D controller;
+
+    public void PlayCoin()
+    {
         Coin.Play();
     }
 
-    public void PlayDeath() {
+    public void PlayDeath()
+    {
         Death.Play();
     }
 
-    public void PlayGrassRun() {
-        GrassRun.Play();
+    public void PlayGrassRun()
+    {
     }
 
-    public void PlayIntro() {
+    public void PlayIntro()
+    {
         Intro.Play();
     }
 
-    public void PlayNextLevel() {
+    public void PlayNextLevel()
+    {
         NextLevel.Play();
     }
 }

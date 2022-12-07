@@ -7,10 +7,11 @@ public class PlayerMovement : MonoBehaviour
 
     public CharacterController2D controller;
     public Animator animator;
+    public AudioSource GrassRun;
 
     public float runSpeed = 40f;
 
-    float horizontalMove = 0f;
+    public float horizontalMove = 0f;
     bool jump = false;
     bool crouch = false;
 
@@ -22,11 +23,6 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        // if (Mathf.Abs(horizontalMove) > 0.01){
-        //     sfx.PlayGrassRun();
-        // }
-        
-
         if (Input.GetButtonDown("Jump"))
         {
             jump = true;
@@ -35,10 +31,17 @@ public class PlayerMovement : MonoBehaviour
         if (!controller.getGrounded())
         {
             animator.SetBool("JumpCheck", true);
+            GrassRun.enabled = false;
         }
         else
         {
             animator.SetBool("JumpCheck", false);
+
+            if (Mathf.Abs(horizontalMove) > 0.01){
+                GrassRun.enabled = true;
+            } else {
+                GrassRun.enabled = false;
+            }
 
         }
 
