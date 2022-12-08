@@ -9,6 +9,8 @@ public class TitleSequence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
+        Cursor.visible = false;
         Debug.Log("test");
         StartCoroutine(wait());
     }
@@ -20,12 +22,14 @@ public class TitleSequence : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
         sprite.color = new Color(1f, 1f, 1f, Mathf.PingPong(Time.time * speed, max));
     }
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(6);
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(7);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
