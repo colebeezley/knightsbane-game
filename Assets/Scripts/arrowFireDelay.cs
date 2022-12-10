@@ -20,7 +20,7 @@ public class arrowFireDelay : MonoBehaviour
     {
         if (moveArrow)
         {
-            arrow.transform.Translate(5 * Time.deltaTime, 0, 0);
+            arrow.transform.Translate(6 * Time.deltaTime, 0, 0);
         }
 
     }

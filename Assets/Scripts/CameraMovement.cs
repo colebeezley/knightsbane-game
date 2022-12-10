@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour
             QuitGame();
         }
 
-        transform.position = new Vector3(player.transform.position.x, transform.position.y, -10);
+        transform.position = new Vector3(player.transform.position.x + 3, transform.position.y, -10);
     }
 
         public void QuitGame()
