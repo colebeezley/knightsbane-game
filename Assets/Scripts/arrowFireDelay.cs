@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class arrowFire : MonoBehaviour
+public class arrowFireDelay : MonoBehaviour
 {
 
     public GameObject trigger;
@@ -28,8 +28,14 @@ public class arrowFire : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            moveArrow=true;
+            StartCoroutine(FireArrow());
         }
     }
 
+    IEnumerator FireArrow()
+    {
+        
+        yield return new WaitForSeconds(Random.Range(1,20));
+        moveArrow=true;
+    }
 }
