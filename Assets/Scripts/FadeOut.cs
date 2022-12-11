@@ -13,7 +13,8 @@ public class FadeOut : MonoBehaviour
 
     IEnumerator Fading()
     {
-        yield return new WaitForSeconds(3);
+        Time.timeScale = 0.6f;
+        yield return new WaitForSecondsRealtime(3);
 
         while (canvas.alpha < 1)
         {
@@ -22,7 +23,7 @@ public class FadeOut : MonoBehaviour
         }
         canvas.interactable = false;
         yield return null;
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSecondsRealtime(1);
 
         QuitGame();
     }

@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class TitleSequence : MonoBehaviour
 {
 
+    public CanvasGroup canvas;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +31,14 @@ public class TitleSequence : MonoBehaviour
     }
     IEnumerator wait()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(2.5f);
+        while (canvas.alpha < 1)
+        {
+            canvas.alpha += Time.deltaTime / 3;
+            yield return null;
+        }
+        canvas.interactable = false;
+        yield return null;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

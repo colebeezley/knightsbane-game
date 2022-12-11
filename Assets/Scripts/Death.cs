@@ -10,6 +10,8 @@ public class Death : MonoBehaviour
     public GameObject Player;
     public AudioSource PlayDeath;
     public Animator animator;
+    public Rigidbody2D rb;
+    public Collider2D collide;
 
     // Start is called before the first frame update
     void Start()
@@ -33,11 +35,13 @@ public class Death : MonoBehaviour
 
     IEnumerator DeathSequence()
     {
+        collide.enabled = false;
+        rb.velocity = Vector2.zero;
         Player.GetComponent<PlayerMovement>().enabled = false;
-        Time.timeScale = 0.5f;
         animator.SetBool("UserDead", true);
+        Time.timeScale = 0.4f;
         PlayDeath.Play();
-        yield return new WaitForSecondsRealtime(.8f);
+        yield return new WaitForSecondsRealtime(1f);
         Time.timeScale = 1;
         Player.GetComponent<PlayerMovement>().enabled = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
