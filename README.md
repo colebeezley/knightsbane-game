@@ -1,12 +1,14 @@
 ## About KnightsBane
 
-<img width="600" alt="chrome_2022-11-12_13-22-46" src="https://i.imgur.com/c2aOYZq.jpg">
+<img width="600" alt="chrome_2022-11-12_13-22-46" src="https://i.imgur.com/Ha3dkoX.jpg">
 
-<img width="600" alt="chrome_2022-11-12_13-22-46" src="https://i.imgur.com/pi99ZAM.jpg">
+<img width="600" alt="chrome_2022-11-12_13-22-46" src="https://i.imgur.com/FTh2R6o.jpg">
 
-This is a game I'm creating using C# with Unity.
+<img width="600" alt="chrome_2022-11-12_13-22-46" src="https://i.imgur.com/wFQNph9.jpg">
 
-I'm creating it with WebGL support, and I'll put it online when it's finished.
+This is a game I creating using C# with Unity.
+
+It is available for free [here](onodeloc.itch.io/knightsbane)!
 
 ### Built With
 
