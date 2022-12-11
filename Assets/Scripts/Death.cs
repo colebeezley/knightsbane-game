@@ -33,6 +33,7 @@ public class Death : MonoBehaviour
 
     IEnumerator DeathSequence()
     {
+        
         Time.timeScale = 0.5f;
         animator.SetBool("UserDead", true);
         PlayDeath.Play();
