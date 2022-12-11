@@ -40,6 +40,7 @@ public class ChestEnd : MonoBehaviour
         collide.enabled = false;
         rb.velocity = Vector2.zero;
         Player.GetComponent<PlayerMovement>().enabled = false;
+        Player.GetComponent<AudioSource>().enabled = false;
         while (canvas.alpha < 1)
         {
             canvas.alpha += Time.deltaTime;

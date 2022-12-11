@@ -9,6 +9,8 @@ public class CameraMovement : MonoBehaviour
 
     public GameObject player;
     public CanvasGroup pauseMenu;
+    public GameObject audio;
+    public GameObject audio2;
     public bool paused = false;
     // Start is called before the first frame update
     void Start()
@@ -32,10 +34,14 @@ public class CameraMovement : MonoBehaviour
         paused = !paused;
         if (paused){
             player.GetComponent<PlayerMovement>().enabled = false;
+            audio.GetComponent<AudioSource>().volume = 0;
+            audio2.GetComponent<AudioSource>().volume = 0;
             pauseMenu.alpha = 0.5f;
             Time.timeScale = 0;
         } else {
             player.GetComponent<PlayerMovement>().enabled = true;
+            audio.GetComponent<AudioSource>().volume = 0.05f;
+            audio2.GetComponent<AudioSource>().volume = 0.05f;
             pauseMenu.alpha = 0;
             Time.timeScale = 1;
         }
