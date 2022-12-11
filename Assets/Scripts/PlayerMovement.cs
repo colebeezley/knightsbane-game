@@ -23,7 +23,8 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat("Speed", Mathf.Abs(horizontalMove));
 
-        if (Input.GetButton("Jump"))
+
+        if (Input.GetButtonDown("Jump"))
         {
             jump = true;
         }
