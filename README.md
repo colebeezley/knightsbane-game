@@ -8,7 +8,7 @@
 
 This is a game I creating using C# with Unity.
 
-It is available for free [here](onodeloc.itch.io/knightsbane)!
+It is available for free [here](https://onodeloc.itch.io/knightsbane)!
 
 ### Built With
 
