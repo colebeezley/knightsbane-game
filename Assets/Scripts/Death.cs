@@ -33,12 +33,13 @@ public class Death : MonoBehaviour
 
     IEnumerator DeathSequence()
     {
-        
+        Player.GetComponent<PlayerMovement>().enabled = false;
         Time.timeScale = 0.5f;
         animator.SetBool("UserDead", true);
         PlayDeath.Play();
         yield return new WaitForSecondsRealtime(.8f);
         Time.timeScale = 1;
+        Player.GetComponent<PlayerMovement>().enabled = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         yield return null;
     }
