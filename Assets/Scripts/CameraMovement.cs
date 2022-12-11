@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class CameraMovement : MonoBehaviour
 {
 
     public GameObject player;
+    public CanvasGroup pauseMenu;
+    public bool paused = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +21,26 @@ public class CameraMovement : MonoBehaviour
     {
         
         if (Input.GetKeyDown(KeyCode.Escape)){
-            SceneManager.LoadScene(0);
+            StartCoroutine(PauseMenu());
         }
 
         transform.position = new Vector3(player.transform.position.x + 3, transform.position.y, -10);
     }
 
-        public void QuitGame()
+    IEnumerator PauseMenu()
+    {
+        paused = !paused;
+        if (paused){
+            pauseMenu.alpha = 0.5f;
+            Time.timeScale = 0;
+        } else {
+            pauseMenu.alpha = 0;
+            Time.timeScale = 1;
+        }
+        yield return null;
+    }
+
+    public void QuitGame()
     {
         // save any game data here
 #if UNITY_EDITOR
