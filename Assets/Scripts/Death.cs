@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,8 @@ public class Death : MonoBehaviour
 {
 
     public GameObject Player;
+    public AudioSource PlayDeath;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -24,7 +27,18 @@ public class Death : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            StartCoroutine(DeathSequence());
         }
+    }
+
+    IEnumerator DeathSequence()
+    {
+        Time.timeScale = 0.5f;
+        animator.SetBool("UserDead", true);
+        PlayDeath.Play();
+        yield return new WaitForSecondsRealtime(.8f);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return null;
     }
 }
