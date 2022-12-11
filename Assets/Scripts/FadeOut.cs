@@ -14,11 +14,11 @@ public class FadeOut : MonoBehaviour
     IEnumerator Fading()
     {
         Time.timeScale = 0.6f;
-        yield return new WaitForSecondsRealtime(3);
+        yield return new WaitForSecondsRealtime(8);
 
         while (canvas.alpha < 1)
         {
-            canvas.alpha += Time.deltaTime / 6;
+            canvas.alpha += Time.deltaTime / 3;
             yield return null;
         }
         canvas.interactable = false;

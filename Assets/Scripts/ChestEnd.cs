@@ -9,6 +9,7 @@ public class ChestEnd : MonoBehaviour
     public GameObject Player;
     public CanvasGroup canvas;
     public Animator animator;
+    public Animator animator2;
     public Rigidbody2D rb;
     public Collider2D collide;
     public AudioSource levelEnd;
@@ -35,6 +36,7 @@ public class ChestEnd : MonoBehaviour
     {
         levelEnd.enabled = true;
         animator.SetBool("LevelEnd", true);
+        animator2.SetBool("LevelEnd", true);
         collide.enabled = false;
         rb.velocity = Vector2.zero;
         Player.GetComponent<PlayerMovement>().enabled = false;

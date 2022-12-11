@@ -20,7 +20,7 @@ public class arrowFire : MonoBehaviour
     {
         if (moveArrow)
         {
-            arrow.transform.Translate(7 * Time.deltaTime, 0, 0);
+            arrow.transform.Translate(8 * Time.deltaTime, 0, 0);
         }
 
     }
