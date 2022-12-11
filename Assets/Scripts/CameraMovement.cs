@@ -31,9 +31,11 @@ public class CameraMovement : MonoBehaviour
     {
         paused = !paused;
         if (paused){
+            player.GetComponent<PlayerMovement>().enabled = false;
             pauseMenu.alpha = 0.5f;
             Time.timeScale = 0;
         } else {
+            player.GetComponent<PlayerMovement>().enabled = true;
             pauseMenu.alpha = 0;
             Time.timeScale = 1;
         }
