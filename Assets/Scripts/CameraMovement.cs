@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CameraMovement : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     {
         
         if (Input.GetKeyDown(KeyCode.Escape)){
-            QuitGame();
+            SceneManager.LoadScene(0);
         }
 
         transform.position = new Vector3(player.transform.position.x + 3, transform.position.y, -10);
