@@ -45,8 +45,8 @@ public class CameraMovement : MonoBehaviour
             Time.timeScale = 0;
         } else {
             player.GetComponent<PlayerMovement>().enabled = true;
-            audio.GetComponent<AudioSource>().volume = 0.05f;
-            audio2.GetComponent<AudioSource>().volume = 0.05f;
+            audio.GetComponent<AudioSource>().volume = 0.03f; //soundtrack gets set to .03
+            audio2.GetComponent<AudioSource>().volume = 0.05f; //ambience gets set to .05
             pauseMenu.alpha = 0;
             Time.timeScale = 1;
         }
