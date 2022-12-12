@@ -15,12 +15,17 @@ public class CameraMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Time.timeScale = 1;
         Cursor.visible = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        // if (Input.GetKeyDown(KeyCode.T)){
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        // }
+        // dev skip for testing purposes
         
         if (Input.GetKeyDown(KeyCode.Escape)){
             StartCoroutine(PauseMenu());
