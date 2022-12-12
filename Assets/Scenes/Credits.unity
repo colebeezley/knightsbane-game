@@ -4011,7 +4011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8680906880471252547, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
       propertyPath: m_text
-      value: Thank you for playing!
+      value: Congratulations on beating Part 1!
       objectReference: {fileID: 0}
     - target: {fileID: 8680906880471252547, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
       propertyPath: m_Enabled
@@ -4019,11 +4019,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8680906880471252547, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
       propertyPath: m_margin.x
-      value: -159.84596
+      value: -200.506
       objectReference: {fileID: 0}
     - target: {fileID: 8680906880471252547, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
       propertyPath: m_margin.z
-      value: -138.73804
+      value: -183.09444
       objectReference: {fileID: 0}
     - target: {fileID: 8680906880471252547, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
       propertyPath: m_fontAsset
@@ -11456,7 +11456,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8680906880471252547, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
       propertyPath: m_text
-      value: Press Space to start New Game+
+      value: Press Space to start Part 2
       objectReference: {fileID: 0}
     - target: {fileID: 8680906880471252547, guid: 8bda2b229956441329797aa7bc0d180f, type: 3}
       propertyPath: m_Enabled
