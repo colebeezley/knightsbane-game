@@ -13,6 +13,7 @@ public class TitleSequence : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.visible = false;
         PlayerPrefs.SetInt("DeathCount", 0);
         StartCoroutine(RevealStart());
     }
@@ -31,7 +32,7 @@ public class TitleSequence : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape)){
-            QuitGame();
+            SceneManager.LoadScene(0);
         }
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.Space)){
             StartCoroutine(wait());
@@ -48,16 +49,5 @@ public class TitleSequence : MonoBehaviour
         canvas.interactable = false;
         yield return null;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
-    public void QuitGame()
-    {
-        // save any game data here
-#if UNITY_EDITOR
-        // Application.Quit() does not work in the editor so
-        // UnityEditor.EditorApplication.isPlaying need to be set to false to end the game
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-         Application.Quit();
-#endif
     }
 }

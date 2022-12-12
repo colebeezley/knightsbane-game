@@ -33,6 +33,7 @@ public class Death : MonoBehaviour
         // remove all velocity, prevents screen movement after death
 
         Player.GetComponent<PlayerMovement>().enabled = false;
+        Destroy(Player.GetComponent<Rigidbody2D>());
         // keep player from moving around after death
 
         animator.SetBool("UserDead", true);
@@ -49,7 +50,7 @@ public class Death : MonoBehaviour
         int currDeaths = PlayerPrefs.GetInt("DeathCount");
         currDeaths++;
         PlayerPrefs.SetInt("DeathCount", currDeaths);
-        
+
         Time.timeScale = 1;
         Player.GetComponent<PlayerMovement>().enabled = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
