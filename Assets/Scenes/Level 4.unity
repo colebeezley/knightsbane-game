@@ -11224,7 +11224,7 @@ MonoBehaviour:
   player: {fileID: 1055076662}
   pauseMenu: {fileID: 943869053}
   audio: {fileID: 339916431}
-  audio2: {fileID: 339916431}
+  audio2: {fileID: 1523098734}
   paused: 0
 --- !u!81 &1063821574
 AudioListener:
